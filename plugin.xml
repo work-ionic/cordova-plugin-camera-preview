@@ -14,6 +14,12 @@
   </js-module>
 
   <platform name="android">
+    <source-file src="src/android/ocr/OCRPredictorNative.java" target-dir="src/com/baidu/paddle/lite/demo/ocr" />
+    <source-file src="src/android/ocr/OcrResultModel.java" target-dir="src/com/baidu/paddle/lite/demo/ocr" />
+    <source-file src="src/android/ocr/Predictor.java" target-dir="src/com/baidu/paddle/lite/demo/ocr" />
+    <source-file src="src/android/ocr/PredictorInstance.java" target-dir="src/com/baidu/paddle/lite/demo/ocr" />
+    <source-file src="src/android/ocr/Utils.java" target-dir="src/com/baidu/paddle/lite/demo/ocr" />
+
     <source-file src="src/android/CameraPreview.java" target-dir="src/com/cordovaplugincamerapreview" />
     <source-file src="src/android/CameraActivity.java" target-dir="src/com/cordovaplugincamerapreview" />
     <source-file src="src/android/CustomSurfaceView.java" target-dir="src/com/cordovaplugincamerapreview" />
@@ -22,6 +28,27 @@
     <source-file src="src/android/camera_activity.xml" target-dir="res/layout" />
     <source-file src="src/android/camera_theme.xml" target-dir="res/values" />
     <source-file src="src/android/camera_ids.xml" target-dir="res/values" />
+
+    <!--assets-->
+    <source-file src="src/model/labels/ppocr_keys_v1.txt" target-dir="labels"/>
+    <source-file src="src/model/ocr_v1_for_cpu/ch_det_mv3_db_opt.nb" target-dir="ocr_v1_for_cpu"/>
+    <source-file src="src/model/ocr_v1_for_cpu/ch_rec_mv3_crnn_opt.nb" target-dir="ocr_v1_for_cpu"/>
+    <source-file src="src/model/ocr_v1_for_cpu/cls_opt_arm.nb" target-dir="ocr_v1_for_cpu"/>
+
+    <!--lib-->
+    <source-file src="src/android/libs/arm64-v8a/libhiai.so" target-dir="libs/arm64-v8a"/>
+    <source-file src="src/android/libs/arm64-v8a/libhiai_ir.so" target-dir="libs/arm64-v8a"/>
+    <source-file src="src/android/libs/arm64-v8a/libNative.so" target-dir="libs/arm64-v8a"/>
+    <source-file src="src/android/libs/arm64-v8a/libhiai_ir_build.so" target-dir="libs/arm64-v8a"/>
+    <source-file src="src/android/libs/arm64-v8a/libpaddle_light_api_shared.so" target-dir="libs/arm64-v8a"/>
+    <source-file src="src/android/libs/arm64-v8a/libc++_shared.so" target-dir="libs/arm64-v8a"/>
+    <source-file src="src/android/libs/armeabi-v7a/libhiai.so" target-dir="libs/armeabi-v7a"/>
+    <source-file src="src/android/libs/armeabi-v7a/libhiai_ir.so" target-dir="libs/armeabi-v7a"/>
+    <source-file src="src/android/libs/armeabi-v7a/libNative.so" target-dir="libs/armeabi-v7a"/>
+    <source-file src="src/android/libs/armeabi-v7a/libhiai_ir_build.so" target-dir="libs/armeabi-v7a"/>
+    <source-file src="src/android/libs/armeabi-v7a/libpaddle_light_api_shared.so" target-dir="libs/armeabi-v7a"/>
+    <source-file src="src/android/libs/armeabi-v7a/libc++_shared.so" target-dir="libs/armeabi-v7a"/>
+
 
     <preference name="ANDROID_SUPPORT_LIBRARY_VERSION" default="26+"/>
     <framework src="com.android.support:exifinterface:$ANDROID_SUPPORT_LIBRARY_VERSION" />
